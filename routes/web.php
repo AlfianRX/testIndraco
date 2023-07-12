@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,22 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/homeadmin', function (){
-    return view('home2');
-})->middleware('role:admin');
+
+
+// Product
+
+Route::get('/home', [App\Http\Controllers\ProductsController::class, 'show_products']);
+Route::post('/add_product', [App\Http\Controllers\ProductsController::class, 'add_product']);
+Route::get('/product_id/{id}', [App\Http\Controllers\ProductsController::class, 'product_id'])->middleware('role:admin');
+Route::post('/edit_product/{id}', [App\Http\Controllers\ProductsController::class, 'edit_product']);
+Route::get('/delete_product/{id}', [App\Http\Controllers\ProductsController::class, 'delete_product'])->middleware('role:admin');
+
+
+//Category
+ Route::get('/category', [App\Http\Controllers\CategoriesController::class, 'show_category']);
+ Route::post('/add_category', [App\Http\Controllers\CategoriesController::class, 'add_category']);
+ Route::get('/category_id/{id}', [App\Http\Controllers\CategoriesController::class, 'category_id']);
+ Route::post('/edit_category/{id}', [App\Http\Controllers\CategoriesController::class, 'edit_category']);
+ Route::get('/delete_category/{id}', [App\Http\Controllers\CategoriesController::class, 'delete_category']);
+
+ Route::get('/search', [ProductsController::class, 'search'])->name('search');

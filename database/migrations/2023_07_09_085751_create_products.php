@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('deskripsi_produk');
             $table->string('kategori_produk');
             $table->integer('harga_produk');
-            $table->string('gambar')->nullable();
+            $table->string('gambar_produk')->nullable();
             $table->timestamps();
         });
     }
