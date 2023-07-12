@@ -17,10 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+//  Route::get('/home2', function () {
+//      return view('home2');
+//  });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/homeadmin', function (){
+    return view('home2');
+})->middleware('role:admin');
