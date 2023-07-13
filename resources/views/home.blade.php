@@ -32,6 +32,7 @@
                             <th scope="col" class="text-center">Name</th>
                             <th scope="col" class="text-center">Stock</th>
                             <th scope="col" class="text-center">Description</th>
+                            <th scope="col" class="text-center">Category</th>
                             <th scope="col" class="text-center">Price</th>
                             <th colSpan='2' scope="col" class="text-center">Action</th>
                             </tr>
@@ -44,6 +45,7 @@
                                 <td class="text-center">{{$p->nama_produk}}</td>
                                 <td class="text-center">{{$p->stock}}</td>
                                 <td class="text-center">{{$p->deskripsi_produk}}</td>
+                                <td class="text-center">{{$p->nama_kategori}}</td>
                                 <td class="text-center">Rp. {{$p->harga_produk}}</td>
                                 <td class="text-center"><a href="{{ url('product_id/'.$p->id) }}" class="btn btn-success mx-2">Edit
                               </a>
@@ -131,7 +133,7 @@
             <div class="card">
                 <div class="card-header">
                 <h1>
-                Our Products
+                Produk Kami
                 </h1>
 
                     <!-- Start kode untuk form pencarian -->

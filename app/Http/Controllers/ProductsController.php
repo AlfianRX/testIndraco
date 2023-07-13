@@ -11,6 +11,7 @@ class ProductsController extends Controller
         $categories = DB::table('products_category')->get();
          $products = DB::table('products')
          ->join('products_category', 'products.kategori_produk', '=', 'products_category.kategori_id')
+         ->select('products.*', 'products_category.nama_kategori')
          ->get();
 
          return view('home', compact('products', 'categories'));
