@@ -38,6 +38,7 @@
 
                 <div style="background-image: #f7f7f7; text-align: center; padding: 50px;">
                     <h1 style="font-size: 36px; margin-bottom: 20px;">Selamat Datang di Cobean Shop</h1>
+                    <h2 style="font-size: 24px; margin-bottom: 20px;">(by : Moch. Rifqi Alfian)</h2>
                     <p style="font-size: 18px; margin-bottom: 20px;">Selamat datang di toko online kami, tempat terbaik untuk menemukan berbagai jenis kopi berkualitas tinggi. Kami menyajikan pilihan kopi terbaik dari berbagai sudut dunia, dengan rasa yang kaya dan aroma yang memikat. Tersedia biji kopi single origin dan campuran unik dengan berbagai profil rasa. Kami juga menyediakan peralatan kopi dan aksesori untuk memaksimalkan pengalaman menyeduh kopi di rumah. Pesanan Anda diproses dengan cepat dan dikirim dengan hati-hati. Nikmati petualangan kopi yang tak terlupakan dengan kami dan temukan ragam rasa dan aroma yang menakjubkan dalam setiap tegukan. Selamat berbelanja dan selamat menikmati kopi!</p>
                     <button style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;"
                     onclick="@auth window.location.href='/home'; @else window.location.href='/login'; @endauth"
