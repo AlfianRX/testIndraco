@@ -44,7 +44,7 @@
                                 <td class="text-center">{{$p->nama_produk}}</td>
                                 <td class="text-center">{{$p->stock}}</td>
                                 <td class="text-center">{{$p->deskripsi_produk}}</td>
-                                <td class="text-center">{{$p->harga_produk}}</td>
+                                <td class="text-center">Rp. {{$p->harga_produk}}</td>
                                 <td class="text-center"><a href="{{ url('product_id/'.$p->id) }}" class="btn btn-success mx-2">Edit
                               </a>
                               <a href="{{ url('delete_product/'.$p->id) }}"

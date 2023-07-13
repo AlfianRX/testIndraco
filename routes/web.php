@@ -37,7 +37,7 @@ Route::get('/delete_product/{id}', [App\Http\Controllers\ProductsController::cla
 
 
 //Category
- Route::get('/category', [App\Http\Controllers\CategoriesController::class, 'show_category']);
+ Route::get('/category', [App\Http\Controllers\CategoriesController::class, 'show_category'])->middleware('role:admin');
  Route::post('/add_category', [App\Http\Controllers\CategoriesController::class, 'add_category']);
  Route::get('/category_id/{id}', [App\Http\Controllers\CategoriesController::class, 'category_id']);
  Route::post('/edit_category/{id}', [App\Http\Controllers\CategoriesController::class, 'edit_category']);
